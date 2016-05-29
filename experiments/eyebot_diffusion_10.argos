@@ -24,12 +24,7 @@
         <eyebot_proximity implementation="default" show_rays="true" />
         <positioning implementation="default" />
       </sensors>
-      <params>
-        <flocking target_distance="100"
-                  gain="25"
-                  exponent="1.5"
-                  max_interaction="0.1" />
-      </params>
+      <params />
     </eyebot_diffusion_controller>
   </controllers>
 
