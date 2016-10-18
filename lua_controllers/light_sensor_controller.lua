@@ -1,4 +1,8 @@
--- Put your global variables here
+-----------------------------------------------------
+-- @author Ewout Merckx - <ewoutmerckx.pro@gmail.com>
+-----------------------------------------------------
+
+-- global variables
 amount_steps = 0
 max_steps = 50
 
