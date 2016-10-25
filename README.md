@@ -16,8 +16,8 @@ The foot-bot stops moving when a given amount of steps are taken.
 
 ### Using the omnidirectional camera
 
-In the [footbot_light_sensor.argos][lua_fb_light_exper] experiment, 
-the [light_sensor_controller.lua][lua_fb_light_contr] looks at the readings
+In the [footbot_light_sensor.argos][lua_fb_omni_camera_exper] experiment, 
+the [light_sensor_controller.lua][lua_fb_omni_camera_contr] looks at the readings
 of the omnidirectional camera of the foot-bot.
 Each step in the experiment, those readings are logged.
 During the experiment, the values remain the same because the robot isn't 
