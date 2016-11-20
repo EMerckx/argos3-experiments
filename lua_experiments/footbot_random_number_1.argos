@@ -23,7 +23,7 @@
                 <differential_steering implementation="default" />
                 <footbot_proximity implementation="default" show_rays="false" />
             </sensors>
-            <params script="lua_controllers/random_number_controller.lua" />
+            <params script="lua_controllers/random_number_controller_1.lua" />
         </lua_controller>
     </controllers>
 

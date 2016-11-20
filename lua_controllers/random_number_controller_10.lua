@@ -41,8 +41,11 @@ end
 
 -- generates a random number and logs it
 function log_random_number()
-    -- generate random number
+    -- generate random number -> [0,1[
     rand = robot.random.uniform()
+
+    -- change random number -> [0,10[
+    rand = math.floor(rand * 10)
 
     log("Random number: " .. rand)
 end
