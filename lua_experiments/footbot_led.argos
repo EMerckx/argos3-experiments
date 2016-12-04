@@ -1,0 +1,70 @@
+<?xml version="1.0" ?>
+<argos-configuration>
+
+    <!-- ************************* -->
+    <!-- * General configuration * -->
+    <!-- ************************* -->
+    <framework>
+        <system threads="0" />
+        <experiment length="100"
+            ticks_per_second="1"
+            random_seed="124" />
+    </framework>
+
+    <!-- *************** -->
+    <!-- * Controllers * -->
+    <!-- *************** -->
+    <controllers>
+        <lua_controller id="contr">
+            <actuators>
+                <differential_steering implementation="default" />
+                <leds implementation="default" medium="leds" />
+            </actuators>
+            <sensors>
+                <differential_steering implementation="default" />
+                <footbot_proximity implementation="default" show_rays="false" />
+            </sensors>
+            <params script="lua_controllers/led_controller.lua" />
+        </lua_controller>
+    </controllers>
+
+    <!-- *********************** -->
+    <!-- * Arena configuration * -->
+    <!-- *********************** -->
+    <arena size="3, 3, 2" center="0, 0, 1">
+
+        <!-- Robots -->
+        <foot-bot id="fb0">
+            <body position="0,0,0" orientation="0,0,0" />
+            <controller config="contr" />
+        </foot-bot>
+
+
+    </arena>
+
+    <!-- ******************* -->
+    <!-- * Physics engines * -->
+    <!-- ******************* -->
+    <physics_engines>
+        <dynamics2d id="dyn2d" />
+    </physics_engines>
+
+    <!-- ********* -->
+    <!-- * Media * -->
+    <!-- ********* -->
+    <media>
+        <led id="leds" />
+    </media>
+
+    <!-- ****************** -->
+    <!-- * Visualization * -->
+    <!-- ****************** -->
+    <visualization>
+        <qt-opengl>
+            <camera>
+                <placement idx="1" position="-0.5,0,0.5" look_at="0,0,0" lens_focal_length="20" />
+            </camera>
+        </qt-opengl>
+    </visualization>
+
+</argos-configuration>
