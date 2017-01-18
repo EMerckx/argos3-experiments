@@ -23,15 +23,15 @@
                 <differential_steering implementation="default" />
                 <footbot_proximity implementation="default" show_rays="false" />
             </sensors>
-            <params script="lua_controllers/footbot_with_loopfunction_interaction_controller.lua" />
+            <params script="lua_controllers/loop_functions_variable_controller.lua" />
         </lua_controller>
     </controllers>
 
     <!-- ****************** -->
     <!-- * Loop functions * -->
     <!-- ****************** -->
-    <loop_functions library="build/loop_functions/footbot_with_loopfunction_interaction/libfootbot_with_loopfunction_interaction"
-        label="footbot_with_loopfunction_interaction">
+    <loop_functions library="build/loop_functions/loop_functions_variable/libloop_functions_variable"
+        label="loop_functions_variable">
     </loop_functions>
 
 

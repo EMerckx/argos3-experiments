@@ -2,7 +2,7 @@
  * BASED ON SOURCE: http://www.argos-sim.info/forum/viewtopic.php?t=82
  */
 
-#include "footbot_with_loopfunction_interaction_loopfunctions.h"
+#include "loop_functions_variable.h"
 
 #include <argos3/core/utility/logging/argos_log.h>
 #include <argos3/core/wrappers/lua/lua_controller.h>
@@ -10,32 +10,32 @@
 /****************************************/
 /****************************************/
 
-CFootBotInteractionLoopFunctions::CFootBotInteractionLoopFunctions() { }
+CLoopFunctionsVariable::CLoopFunctionsVariable() { }
 
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::Init(TConfigurationNode& t_tree) { }
+void CLoopFunctionsVariable::Init(TConfigurationNode& t_tree) { }
 
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::Reset() { }
+void CLoopFunctionsVariable::Reset() { }
 
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::Destroy() { }
+void CLoopFunctionsVariable::Destroy() { }
 
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::PreStep() { }
+void CLoopFunctionsVariable::PreStep() { }
 
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::PostStep() { 
+void CLoopFunctionsVariable::PostStep() { 
 	// retrieve the foot-bot entities from the space
 	CSpace::TMapPerType& cFootBotMap = 
 		GetSpace().GetEntitiesByType("foot-bot");
@@ -59,7 +59,7 @@ void CFootBotInteractionLoopFunctions::PostStep() {
 /****************************************/
 /****************************************/
 
-void CFootBotInteractionLoopFunctions::GetNumber(CFootBotEntity& c_foot_bot) {
+void CLoopFunctionsVariable::GetNumber(CFootBotEntity& c_foot_bot) {
 
 	// get the controller from the foot-bot
 	// and cast it to a lua controller
@@ -91,4 +91,4 @@ void CFootBotInteractionLoopFunctions::GetNumber(CFootBotEntity& c_foot_bot) {
 /****************************************/
 /****************************************/
 
-REGISTER_LOOP_FUNCTIONS(CFootBotInteractionLoopFunctions, "footbot_with_loopfunction_interaction")
+REGISTER_LOOP_FUNCTIONS(CLoopFunctionsVariable, "loop_functions_variable")
