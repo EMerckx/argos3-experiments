@@ -3,12 +3,11 @@
 -----------------------------------------------------
 
 -- global variables
-number = 0
 
 -- initialization 
 function init()
     -- init the number
-    number = 0
+    robot.number = 0
 
     -- set the speed of the robot to zero
     robot.wheels.set_velocity(0,0)
@@ -35,7 +34,7 @@ end
 -- changes the number and logs it
 function change_number()
     -- generate new number
-    number = math.floor(robot.random.uniform() * 10)
+    robot.number = math.floor(robot.random.uniform() * 10)
 
-    log("Number in controller: " .. number)
+    log("Number in controller: " .. robot.number)
 end
