@@ -7,6 +7,12 @@ These are separated from each other in different directories.
 
 ## Lua experiments
 
+### Hello world
+
+To start off, a little experiment where the foot-bot logs "Hello world." on each step.
+The [footbot_hello_world.argos][lua_fb_hello_world_exper] experiment uses the following 
+Lua controller: [hello_world_controller.lua][lua_fb_hello_world_contr].
+
 ### Using the light sensor
 
 In the [footbot_light_sensor.argos][lua_fb_light_exper] experiment, 
@@ -33,6 +39,9 @@ The visualization of the experiment can be viewed in
 [the led actuator movie][yt_fb_led_exper].
 
 [1]: https://github.com/ilpincy/argos3-examples
+
+[lua_fb_hello_world_exper]: https://github.com/EMerckx/argos3-experiments/blob/master/lua_experiments/footbot_hello_world.argos
+[lua_fb_hello_world_contr]: https://github.com/EMerckx/argos3-experiments/blob/master/lua_controllers/hello_world_controller.lua
 
 [lua_fb_light_exper]: https://github.com/EMerckx/argos3-experiments/blob/master/lua_experiments/footbot_light_sensor.argos
 [lua_fb_light_contr]: https://github.com/EMerckx/argos3-experiments/blob/master/lua_controllers/light_sensor_controller.lua
